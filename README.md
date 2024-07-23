@@ -3,11 +3,14 @@
 편집기 : Visual Studio 2022<br>
 ARPG의 기본적인 기능들을 구현해봤습니다.
 
+## 시연 영상
+
+
 ## 캐릭터 구조 (ACharacter - AController)
 ![유닛 클래스](https://github.com/user-attachments/assets/6b0cd32c-29b1-49a7-8697-6ae0150d8ee5)
 ![유닛 스탯](https://github.com/user-attachments/assets/419b5f9b-cc6d-404a-a0de-472443d4249f)<br>
 
-### AGameUnit
+## AGameUnit
 UEquipmentComponent 관리<br>
 UCharacterStatuscComponent를 통해 캐릭터 자원(체력, 데미지, 스태미너, ...) 관리<br>
 UPlayerUI에 체력, 스태미너가 변할때 event처리를 위한 함수포인터 전달<br>
@@ -119,7 +122,15 @@ void AMyCharacter::Tick(float TickDelta)
 <br>
 락온 대상과 카메라가 일정시간 가려지면 자동으로 풀립니다. <br>
 
-### UEquipmentComponent
+### AEnemy
+체력 ui(UWidgetComponent)에 event처리를 위한 함수포인터 전달<br>
+UAIPerceptionComponent, UAISenseConfig_Sight로 시야 감지 및 BehaviourTree에 정보 전달<br>
+![일반 몹 ai](https://github.com/user-attachments/assets/c38094a5-aae7-45fc-944a-0081d1161416)<br>
+일반 적은 위와 같은 BT로 동작합니다.<br><br>
+![보스 ai 1](https://github.com/user-attachments/assets/4e588550-d3d0-4230-926a-0470a09ee415)<br>
+보스는 적과의 거리에 따라 행동이 달라집니다.<br><br>
+
+## UEquipmentComponent
 ![장비 클래스](https://github.com/user-attachments/assets/7bd39806-a5a5-4894-84b8-7c7b3bc386cc)<br>
 캐릭터마다 사용할 장비의 Mesh와 BoxComponent를 관리합니다.<br>
 장비마다 각각의 Montage를 불러와 사용합니다.<br>
@@ -182,12 +193,4 @@ bool UEquipmentComponent::CheckSweepCollision(FHitResult& HitResult)
 }
 ```
 Montage마다 UAnimNotifyState를 상속받은 UCollisionStateNotify를 세팅 및 CheckSweepCollision를 호출하여 데미지 및 가드처리를 관리합니다.<br>
-
-### AEnemy
-체력 ui(UWidgetComponent)에 event처리를 위한 함수포인터 전달<br>
-UAIPerceptionComponent, UAISenseConfig_Sight로 시야 감지 및 BehaviourTree에 정보 전달<br>
-![일반 몹 ai](https://github.com/user-attachments/assets/c38094a5-aae7-45fc-944a-0081d1161416)<br>
-일반 적은 위와 같은 BT로 동작합니다.<br><br>
-![보스 ai 1](https://github.com/user-attachments/assets/4e588550-d3d0-4230-926a-0470a09ee415)<br>
-보스는 적과의 거리에 따라 행동이 달라집니다.<br><br>
 
