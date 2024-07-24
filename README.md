@@ -127,7 +127,7 @@ void AMyCharacter::Tick(float TickDelta)
 UAIPerceptionComponent, UAISenseConfig_Sight로 시야 감지 및 BehaviourTree에 정보 전달<br>
 ![일반 몹 ai](https://github.com/user-attachments/assets/c38094a5-aae7-45fc-944a-0081d1161416)<br>
 일반 적은 위와 같은 BT로 동작합니다.<br><br>
-![보스 ai 1](https://github.com/user-attachments/assets/4e588550-d3d0-4230-926a-0470a09ee415)<br>
+![보스 ai 1](https://github.com/user-attachments/assets/d24a5bcd-33ef-475a-8d60-44152d29f530)<br>
 보스는 적과의 거리에 따라 행동이 달라집니다.<br><br>
 
 ## UEquipmentComponent
