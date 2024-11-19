@@ -3,9 +3,6 @@
 편집기 : Visual Studio 2022<br>
 ARPG의 기본적인 기능들을 구현해봤습니다.
 
-## 시연 영상
-### YouTube
-[![포트폴리오 영상](http://img.youtube.com/vi/'z3EQUsVlXM8'/0.jpg)](https://youtu.be/z3EQUsVlXM8)<br>
 
 ## 캐릭터 구조 (ACharacter - AController)
 ![유닛 클래스](https://github.com/user-attachments/assets/6b0cd32c-29b1-49a7-8697-6ae0150d8ee5)
